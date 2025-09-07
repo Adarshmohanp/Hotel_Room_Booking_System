@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking System - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Hotel Booking Management System</h1>
+        <button id="logoutBtn">Logout</button>
+    </header>
+    
+    <main>
+        <div class="controls-section">
+            <div class="search-section">
+                <h2>Search Booking by ID</h2>
+                <form id="searchForm">
+                    <input type="text" id="bookingId" placeholder="Enter Booking ID" required>
+                    <button type="submit">Search</button>
+                    <button type="button" id="showAllBtn">Show All Bookings</button>
+                </form>
+            </div>
+            
+            <div class="table-controls">
+                <div class="entries-control">
+                    <label for="entriesSelect">Show</label>
+                    <select id="entriesSelect">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                    <span>entries</span>
+                </div>
+                
+                <div class="filter-control">
+                    <input type="text" id="searchInput" placeholder="Search in table...">
+                </div>
+            </div>
+        </div>
+        
+        <div class="results-section">
+            <h2>Booking Details</h2>
+            <div id="loading" class="loading">Loading bookings...</div>
+            <div id="bookingDetails" class="booking-details">
+                <!-- Table will be inserted here by JavaScript -->
+            </div>
+            
+            <div class="pagination-controls">
+                <button id="prevPageBtn">Previous</button>
+                <span id="pageInfo">Page 1 of 1</span>
+                <button id="nextPageBtn">Next</button>
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
